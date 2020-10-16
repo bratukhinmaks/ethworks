@@ -1,0 +1,14 @@
+extends ../layouts/home
+
+block head_end
+    link(rel="stylesheet" href="css/main.css")
+
+block content
+    include ../sections/navigation
+    include  ../sections/hero
+    include ../sections/testimonials
+    include ../sections/contact
+    include ../sections/footer
+
+block body_end
+    script(type="text/javascript" src="/js/script.js")
