@@ -1,0 +1,30 @@
+footer {
+  height: 230px;
+  width:100%;
+  background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 41.68%, #E9ECF6 49.59%, #CED3E8 93.91%);
+  .footer {
+    &-inner {
+      width: 90%;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+    &-top {
+      text-align: center;
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-left {
+        width: 30%;
+      }
+      &-center {
+        width:30%;
+      }
+      &-right {
+        width: 30%;
+      }
+    }
+  }
+}
