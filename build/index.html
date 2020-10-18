@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   </head>
   <body>
     <nav>
@@ -13,36 +14,32 @@
           <div class="nav-items-right">
             <div class="nav-items-right_logo"><img src="../../img/logo.svg"></div>
           </div>
-          <div class="nav-items-left">
-            <div class="nav-items-left_list">
-              <div class="nav-items-left_item active">ICO</div>
-              <div class="nav-items-left_item">Team</div>
-              <div class="nav-items-left_item">Contact</div>
-            </div>
-          </div>
+          <ul class="nav-items-left">
+            <li class="nav-items-left_item active">ICO</li>
+            <li class="nav-items-left_item">Team</li>
+            <li class="nav-items-left_item">Contact</li>
+          </ul>
         </div>
       </div>
     </nav>
-    <main>
-      <div class="hero">
-        <div class="hero-container">
-          <div class="hero-text">
-            <div class="hero-text-title">The first fully-automatic social crypto trading platform with real crypto currency</div>
-            <div class="hero-text-description">Subscribe and get the lastes information</div>
-            <div class="hero-text-input">
-              <input placeholder="Enter your email">
-              <button>Subscribe</button>
-            </div>
+    <div class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <div class="hero-text-title">The first fully-automatic social crypto trading platform with real crypto currency</div>
+          <div class="hero-text-description">Subscribe and get the lastes information</div>
+          <div class="hero-text-input">
+            <input placeholder="Enter your email">
+            <button>Subscribe</button>
+          </div><a class="hero-scroll-buttom hero-scroll-buttom--sm" href="#testimonials"><img src="../../img/scrollbutton.svg"></a>
+        </div>
+        <div class="hero-video">
+          <div class="hero-video-placeholder">
+            <div class="hero-video-img"><img src="../../img/video.png"></div>
+            <div class="hero-video-button"><img src="../../img/playbutton.svg"></div>
           </div>
-          <div class="hero-video">
-            <div class="hero-video-placeholder">
-              <div class="hero-video-img"><img src="../../img/video.png"></div>
-              <div class="hero-video-button"><img src="../../img/playbutton.svg"></div>
-            </div>
-          </div>
-        </div><a class="hero-scroll-buttom" href="#testimonials"><img src="../../img/scrollbutton.svg"></a>
-      </div>
-    </main>
+        </div>
+      </div><a class="hero-scroll-buttom" href="#testimonials"><img src="../../img/scrollbutton.svg"></a>
+    </div>
     <section class="testimonials" id="testimonials">
       <div class="testimonials-title">TEAM</div>
       <div class="testimonials-items">
@@ -134,7 +131,27 @@
     </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
+    <script>
+      $(document).ready(() =>{
+          $('.testimonials-items').slick({
+              dots: false,
+              infinite: false,
+              speed: 300,
+              arrows: false,
+              slidesToShow: 2.5,
+              slidesToScroll: 2,
+              autoPlay: true,
+              mobileFirst: true,
+              responsive: [
+                  {
+                      breakpoint: 768,
+                      settings: "unslick"
+                  }
+              ]
+          });
+      })
+    </script>
   </body>
 </html>

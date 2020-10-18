@@ -1,7 +1,27 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
 }
 body {
   margin: 0;
   font-family: 'Sen', sans-serif;
+
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  html {
+    font-size: 56%;
+  }
 }

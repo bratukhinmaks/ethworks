@@ -2,6 +2,7 @@ extends ../layouts/home
 
 block head_end
     link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 
 block content
     include ../sections/navigation
@@ -12,3 +13,23 @@ block content
 
 block body_end
     script(type="text/javascript" src="/js/script.js")
+    script.
+        $(document).ready(() =>{
+            $('.testimonials-items').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                arrows: false,
+                slidesToShow: 2.5,
+                slidesToScroll: 2,
+                autoPlay: true,
+                mobileFirst: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: "unslick"
+                    }
+                ]
+            });
+        })
+

@@ -26,13 +26,8 @@ nav {
         width: 50%;
         display: flex;
         justify-content: flex-end;
-
-        &_list {
-          width: 30%;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-        }
+        align-items: flex-end;
+        list-style-type: none;
 
         &_item {
           font-size: 16px;
@@ -40,6 +35,11 @@ nav {
           border-bottom: 2px solid rgba(0, 0, 0, 0);
           padding: 5px 0;
           transition: 0.4s all ease-in-out;
+          cursor: pointer;
+
+          &:not(:last-child) {
+            margin-right: 4rem;
+          }
 
           &:hover {
             border-bottom: 2px solid $nav-border;
@@ -48,4 +48,26 @@ nav {
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    .nav-inner {
+      .nav-items {
+        &-left {
+
+          &_item {
+            &:not(:last-child) {
+              margin-right: 2rem;
+            }
+          }
+
+        }
+
+
+      }
+    }
+
+  }
+
 }

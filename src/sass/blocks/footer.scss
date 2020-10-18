@@ -17,8 +17,10 @@ footer {
       justify-content: space-between;
       align-items: center;
       &-left {
+        flex: 0 0 25%;
         img {
           width: 100%;
+          height: 4rem;
         }
       }
       &-center {
@@ -26,6 +28,8 @@ footer {
           color:#263396;
           font-size: 16px;
         }
+
+        flex-grow: 1;
         a {
           color: #0F81FF;
           text-decoration: underline;
@@ -33,6 +37,7 @@ footer {
         }
       }
       &-right {
+        flex: 0 0 25%;
          button {
            color:white;
            background: #38A5DB;
@@ -63,6 +68,49 @@ footer {
     &-item:nth-last-child(1) {
       border-right: none;
       padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .footer {
+      &-items {
+        width: 100%;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 562px) {
+  footer {
+    .footer {
+      &-items {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &-item {
+        border-right: none;
+        padding-right: 0;
+        flex: 0 0 50%;
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 3rem;
+      }
+
+      &-top {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &-left {
+          align-self: flex-start;
+          img {
+            height: 2.5rem;
+          }
+        }
+      }
     }
   }
 }
