@@ -39,6 +39,17 @@
           </div>
         </div>
       </div><a class="hero-scroll-buttom" href="#testimonials"><img src="../../img/scrollbutton.svg"></a>
+      <div class="hero-float-menu"><img src="../../img/social_media.png"></div>
+      <div class="hero-modal-container">
+        <div class="modal">
+          <div class="modal-content">
+            <div class="modal-title">Edgar Morrison</div>
+            <div class="modal-position">CEO</div>
+            <div class="modal-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+          </div>
+          <div class="modal-close"><img src="../../img/close.svg"></div>
+        </div>
+      </div>
     </div>
     <section class="testimonials" id="testimonials">
       <div class="testimonials-title">TEAM</div>
@@ -151,6 +162,13 @@
                   }
               ]
           });
+          $('.hero-video').click(()=> {
+              $('.hero-modal-container').css("display","block");
+          })
+      
+          $('.modal-close').click(() => {
+              $('.hero-modal-container').css("display", "none");
+          })
       })
     </script>
   </body>

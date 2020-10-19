@@ -1,6 +1,6 @@
 
 .hero {
-
+ position:relative;
   padding-top: 10rem;
   text-align: center;
   width: 100%;
@@ -8,7 +8,56 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  &-modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(37, 43, 66,0.5);
+  }
+  .modal {
+    position: relative;
+    max-height: 75rem;
+    width:63rem;
+    z-index:999;
+    margin: 5% auto;
+    border-radius: 2rem;
+    background-color:white;
+    box-shadow: 0 4px 44px rgba(0, 0, 0, 0.25);
+    &-content {
+      padding:7rem 5rem 10rem;
+      text-align: center;
+    }
+    &-title {
+      font-size: 4rem;
+      color: #38A5DB;
+      margin-bottom: 2rem;
+    }
+    &-position {
+      font-size: 1.3rem;
+      color:#011226;
+      margin-bottom: 3rem;
+    }
+    &-description {
+      font-size: 1.8rem;
+      color:#45515F;
+      max-height: 40rem;
+      overflow-y: scroll;
+    }
 
+    &-close {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+    }
+  }
+  &-float-menu {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+  }
   &-container {
     width: 80%;
     display: flex;
@@ -162,6 +211,31 @@
   .hero {
     &-container {
       width: 95%;
+    }
+    &-modal-container {
+    }
+    .modal {
+      position: relative;
+      max-height: 85rem;
+      width:28rem;
+      &-content {
+        padding:5rem 2.5rem 5rem;
+      }
+      &-title {
+        font-size: 2.3rem;
+
+      }
+      &-description {
+        font-size: 1.3rem;
+        max-height: 60rem;
+        overflow-y: scroll;
+      }
+
+      &-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
     }
 
     &-scroll-buttom--sm {

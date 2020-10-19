@@ -31,5 +31,12 @@ block body_end
                     }
                 ]
             });
+            $('.hero-video').click(()=> {
+                $('.hero-modal-container').css("display","block");
+            })
+
+            $('.modal-close').click(() => {
+                $('.hero-modal-container').css("display", "none");
+            })
         })
 
